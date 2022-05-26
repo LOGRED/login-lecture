@@ -4,7 +4,7 @@ class UserStorage {
     static #users = {
         id: ["logsh", "박성현", "tjdgus"],
         psword: ["1234", "1122", "2211"],
-        names: ["에이군", "비군", "씨군"],
+        name: ["에이군", "비군", "씨군"],
     };
 
     static getUsers(...fields) {
@@ -26,9 +26,18 @@ class UserStorage {
             newUser[info] = users[info][idx];
             return newUser;
         }, {});
-        
+
         return userInfo;
     };
+
+    static save(userInfo) {
+        const users = this.#users;
+        users.id.push(userInfo.id);
+        users.name.push(userInfo.name);
+        users.psword.push(userInfo.psword);
+
+        return { success: true }
+    }
 }
 
 module.exports = UserStorage;
