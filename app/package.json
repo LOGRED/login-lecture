@@ -1,7 +1,6 @@
 {
   "name": "login-lecture",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "bin": {
     "login-lecture": "bin/www.js"
@@ -84,5 +83,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
